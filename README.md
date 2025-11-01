@@ -16,8 +16,7 @@ and design efficient GFlowNet algorithms to tackle them.
 ## Dependency
 
 ```bash
-pip install hydra-core==1.1.0 omegaconf submitit hydra-submitit-launcher
-pip install dgl==0.6.1
+pip install -r requirements.txt
 ```
 
 ## Data generation

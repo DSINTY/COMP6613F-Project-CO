@@ -101,7 +101,7 @@ def get_data_loaders(cfg):
     trainset = GraphDataset(train_cache_directory, size=cfg.trainsize)
     testset = GraphDataset(test_cache_directory,  size=cfg.testsize)
 
-    collate_fn = lambda graphs: dgl.batch(graphs)
+    collate_fn = dgl.batch
     train_batch_size = 1 if cfg.same_graph_across_batch else cfg.batch_size_interact
     train_loader = DataLoader(trainset, batch_size=train_batch_size,
             shuffle=cfg.shuffle, collate_fn=collate_fn, drop_last=False,
