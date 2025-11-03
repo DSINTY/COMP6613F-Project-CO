@@ -1,3 +1,7 @@
+# computed files
+compute/
+Dockerfile*
+
 # large data file
 *.gpickle
 *.graph

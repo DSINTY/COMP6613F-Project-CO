@@ -1,4 +1,7 @@
-hydra-core==1.1.0 omegaconf submitit hydra-submitit-launcher
+hydra-core==1.1.0 
+omegaconf 
+submitit 
+hydra-submitit-launcher
 dgl==2.2.1
 networkx==2.8.8
 torch==2.2.1
