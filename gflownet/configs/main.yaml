@@ -1,5 +1,8 @@
 defaults:
   - override hydra/launcher: submitit_slurm
+  - _self_  
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled  
 
 task: mis
 input: rb200-300
@@ -47,8 +50,9 @@ rexpit: 1
 
 
 hydra:
-  run:
-    dir: ./outputs/${now:%Y.%m.%d}/${now:%H.%M.%S}
+  output_subdir: null  
+  run:  
+    dir: .
   sweep:
     dir: ${oc.env:HOME}/scratch/${now:%Y.%m.%d}/${now:%H.%M.%S}
     subdir: ${hydra.job.override_dirname}
